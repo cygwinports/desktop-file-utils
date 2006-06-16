@@ -1,0 +1,81 @@
+desktop-file-utils
+-------------------------------------------
+Utilities for manipulating desktop files.
+
+desktop-file-validate: validates a desktop file and prints 
+    warnings/errors about spec violations.
+desktop-file-install: installs a desktop file to the applications 
+    directory, optionally munging it a bit in transit.
+desktop-menu-tool: loads .vfolder-info and .menu files and does stuff 
+    with them
+
+Runtime requirements
+  cygwin-1.5.19-4
+  glib2-2.8.6-1
+
+Build requirements:
+(besides corresponding devel packages)
+  cygwin-1.5.19-4
+  autoconf2.5-2.59-3
+  automake1.9-1.9.6-1
+  binutils-20050610-1
+  cygport-0.1.92-1
+  emacs-21.2-13		(optional)
+  gawk-3.1.5-2
+  gcc-core-3.4.4-1
+  make-3.80-1
+  pkg-config-0.20-1
+  sed-4.1.4-1
+
+Canonical homepage:
+  http://freedesktop.org/Software/desktop-file-utils
+
+-------------------------------------------
+
+Build instructions:
+  unpack desktop-file-utils-0.11-1-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./desktop-file-utils-0.11-1.cygport all
+
+This will create:
+  /usr/src/desktop-file-utils-0.11-1-src.tar.bz2
+  /usr/src/desktop-file-utils-0.11-1.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /usr/bin/desktop-file-install.exe
+  /usr/bin/desktop-file-validate.exe
+  /usr/bin/update-desktop-database.exe
+  /usr/share/doc/Cygwin/desktop-file-utils-0.11.README
+  /usr/share/doc/desktop-file-utils-0.11/AUTHORS
+  /usr/share/doc/desktop-file-utils-0.11/ChangeLog
+  /usr/share/doc/desktop-file-utils-0.11/COPYING
+  /usr/share/doc/desktop-file-utils-0.11/INSTALL
+  /usr/share/doc/desktop-file-utils-0.11/NEWS
+  /usr/share/doc/desktop-file-utils-0.11/README
+  /usr/share/emacs/site-lisp/desktop-entry-mode.el
+  /usr/share/emacs/site-lisp/desktop-entry-mode.elc
+
+------------------
+
+Port Notes:
+
+----- version 0.11-1 -----
+Version bump.
+
+----- version 0.10-1 -----
+New upstream release, including major changes to the code and build 
+system; see ChangeLog for details.  The gnome-vfs module was removed 
+from the upstream source as part of this reorganization.
+
+----- version 0.8-1 -----
+Initial release for Cygwin.  Since gnome-vfs has yet to be built, the 
+vfs module is not included in this package.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
