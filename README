@@ -17,9 +17,9 @@ Build requirements:
 (besides corresponding devel packages)
   cygwin-1.5.24-2
   autoconf2.5-2.61-1
-  automake1.9-1.9.6-2
+  automake1.7-1.7.9-3
   binutils-20060817-1
-  cygport-0.3.5-1
+  cygport-0.3.7-1
   gawk-3.1.5-4
   gcc-core-3.4.4-3
   make-3.81-1
@@ -32,15 +32,15 @@ Canonical homepage:
 -------------------------------------------
 
 Build instructions:
-  unpack desktop-file-utils-0.13-1-src.tar.bz2
+  unpack desktop-file-utils-0.14-1-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./desktop-file-utils-0.13-1.cygport all
+  cygport ./desktop-file-utils-0.14-1.cygport all
 
 This will create:
-  /usr/src/desktop-file-utils-0.13-1-src.tar.bz2
-  /usr/src/desktop-file-utils-0.13-1.tar.bz2
+  /usr/src/desktop-file-utils-0.14-1-src.tar.bz2
+  /usr/src/desktop-file-utils-0.14-1.tar.bz2
 
 -------------------------------------------
 
@@ -49,16 +49,20 @@ Files included in the binary package:
   /usr/bin/desktop-file-install.exe
   /usr/bin/desktop-file-validate.exe
   /usr/bin/update-desktop-database.exe
-  /usr/share/doc/Cygwin/desktop-file-utils-0.13.README
-  /usr/share/doc/desktop-file-utils-0.13/AUTHORS
-  /usr/share/doc/desktop-file-utils-0.13/ChangeLog
-  /usr/share/doc/desktop-file-utils-0.13/COPYING
-  /usr/share/doc/desktop-file-utils-0.13/NEWS
-  /usr/share/doc/desktop-file-utils-0.13/README
+  /usr/share/doc/Cygwin/desktop-file-utils-0.14.README
+  /usr/share/doc/desktop-file-utils-0.14/AUTHORS
+  /usr/share/doc/desktop-file-utils-0.14/ChangeLog
+  /usr/share/doc/desktop-file-utils-0.14/COPYING
+  /usr/share/doc/desktop-file-utils-0.14/NEWS
+  /usr/share/doc/desktop-file-utils-0.14/README
+  /usr/share/emacs/site-lisp/desktop-entry-mode.el
 
 ------------------
 
 Port Notes:
+
+----- version 0.14-1 -----
+Version bump.
 
 ----- version 0.13-1 -----
 Version bump.
