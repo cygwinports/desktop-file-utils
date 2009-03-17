@@ -10,20 +10,21 @@ desktop-menu-tool: loads .vfolder-info and .menu files and does stuff
     with them
 
 Runtime requirements
-  cygwin-1.5.24-2
-  glib2-2.12.13-1
+  cygwin-1.7.0-43
+  libgcc1-4.3.2-2
+  libglib2.0_0-2.20.0-1
+  libintl8-0.17-10
 
 Build requirements:
 (besides corresponding devel packages)
-  cygwin-1.5.24-2
-  autoconf2.5-2.61-1
-  automake1.7-1.7.9-3
-  binutils-20060817-1
-  cygport-0.3.7-1
-  gawk-3.1.5-4
-  gcc-core-3.4.4-3
-  make-3.81-1
-  pkg-config-0.21-1
+  autoconf2.5-2.63-10
+  automake1.7-1.7.9-10
+  binutils-20080624-2
+  cygport-0.9.5-1
+  gawk-3.1.6-2
+  gcc4-core-4.3.2-2
+  make-3.81-2
+  pkg-config-0.23a-2
   sed-4.1.5-2
 
 Canonical homepage:
@@ -32,15 +33,15 @@ Canonical homepage:
 -------------------------------------------
 
 Build instructions:
-  unpack desktop-file-utils-0.14-1-src.tar.bz2
+  unpack desktop-file-utils-0.15-1-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./desktop-file-utils-0.14-1.cygport all
+  cygport ./desktop-file-utils-0.15-1.cygport all
 
 This will create:
-  /usr/src/desktop-file-utils-0.14-1-src.tar.bz2
-  /usr/src/desktop-file-utils-0.14-1.tar.bz2
+  /usr/src/desktop-file-utils-0.15-1-src.tar.bz2
+  /usr/src/desktop-file-utils-0.15-1.tar.bz2
 
 -------------------------------------------
 
@@ -49,38 +50,18 @@ Files included in the binary package:
   /usr/bin/desktop-file-install.exe
   /usr/bin/desktop-file-validate.exe
   /usr/bin/update-desktop-database.exe
-  /usr/share/doc/Cygwin/desktop-file-utils-0.14.README
-  /usr/share/doc/desktop-file-utils-0.14/AUTHORS
-  /usr/share/doc/desktop-file-utils-0.14/ChangeLog
-  /usr/share/doc/desktop-file-utils-0.14/COPYING
-  /usr/share/doc/desktop-file-utils-0.14/NEWS
-  /usr/share/doc/desktop-file-utils-0.14/README
-  /usr/share/emacs/site-lisp/desktop-entry-mode.el
+  /usr/share/doc/desktop-file-utils/AUTHORS
+  /usr/share/doc/desktop-file-utils/ChangeLog
+  /usr/share/doc/desktop-file-utils/COPYING
+  /usr/share/doc/desktop-file-utils/NEWS
+  /usr/share/doc/desktop-file-utils/README
 
 ------------------
 
 Port Notes:
 
------ version 0.14-1 -----
-Version bump.
-
------ version 0.13-1 -----
-Version bump.
-
------ version 0.12-1 -----
-Version bump.  Removed emacs lisp.
-
------ version 0.11-1 -----
-Version bump.
-
------ version 0.10-1 -----
-New upstream release, including major changes to the code and build 
-system; see ChangeLog for details.  The gnome-vfs module was removed 
-from the upstream source as part of this reorganization.
-
------ version 0.8-1 -----
-Initial release for Cygwin.  Since gnome-vfs has yet to be built, the 
-vfs module is not included in this package.
+----- version 0.15-1 -----
+Initial release for Cygwin 1.7.
 
 
 Cygwin port maintained by:
