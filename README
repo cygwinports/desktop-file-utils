@@ -10,19 +10,20 @@ desktop-menu-tool: loads .vfolder-info and .menu files and does stuff
     with them
 
 Runtime requirements
-  cygwin-1.7.0-48
-  libgcc1-4.3.2-2
-  libglib2.0_0-2.20.3-1
-  libintl8-0.17-10
+  cygwin-1.7.1-1
+  libgcc1-4.3.4-3
+  libglib2.0_0-2.22.2-1
+  libintl8-0.17-11
 
 Build requirements:
 (besides corresponding devel packages)
-  autoconf2.5-2.63-10
+  autoconf2.5-2.65-10
   automake1.7-1.7.9-10
-  binutils-20080624-2
-  cygport-0.9.6-1
-  gawk-3.1.6-2
-  gcc4-core-4.3.2-2
+  binutils-2.19.51-1
+  cygport-0.9.10-1
+  gawk-3.1.7-1
+  gcc4-core-4.3.4-3
+  libtool-2.2.7a-14
   make-3.81-2
   pkg-config-0.23b-10
   sed-4.1.5-2
@@ -33,36 +34,21 @@ Canonical homepage:
 -------------------------------------------
 
 Build instructions:
-  unpack desktop-file-utils-0.15-1-src.tar.bz2
+  unpack desktop-file-utils-0.15-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./desktop-file-utils-0.15-1.cygport all
+  cygport ./desktop-file-utils-0.15-X.cygport all
 
 This will create:
-  /usr/src/desktop-file-utils-0.15-1-src.tar.bz2
-  /usr/src/desktop-file-utils-0.15-1.tar.bz2
+  /usr/src/desktop-file-utils-0.15-X-src.tar.bz2
+  /usr/src/desktop-file-utils-0.15-X.tar.bz2
 
 -------------------------------------------
 
-Files included in the binary package:
-
-  /usr/bin/desktop-file-install.exe
-  /usr/bin/desktop-file-install.exe.manifest
-  /usr/bin/desktop-file-validate.exe
-  /usr/bin/update-desktop-database.exe
-  /usr/bin/update-desktop-database.exe.manifest
-  /usr/share/doc/desktop-file-utils/AUTHORS
-  /usr/share/doc/desktop-file-utils/ChangeLog
-  /usr/share/doc/desktop-file-utils/COPYING
-  /usr/share/doc/desktop-file-utils/NEWS
-  /usr/share/doc/desktop-file-utils/README
-
-------------------
-
 Port Notes:
 
------ version 0.15-2 -----
+----- version 0.15-3 -----
 Rebuilt to add .manifest files for avoiding UAC issues.
 
 ----- version 0.15-1 -----
