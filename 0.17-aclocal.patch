@@ -1,0 +1,10 @@
+--- origsrc/desktop-file-utils-0.17/Makefile.am	2010-09-09 20:30:44.000000000 -0500
++++ src/desktop-file-utils-0.17/Makefile.am	2010-10-31 22:25:17.931139700 -0500
+@@ -1,7 +1,5 @@
+ SUBDIRS = man misc src
+ 
+-ACLOCAL_AMFLAGS = -I m4
+-
+ EXTRA_DIST = HACKING
+ 
+ MAINTAINERCLEANFILES = \
