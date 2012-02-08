@@ -1,11 +1,4 @@
 category: X11
 requires: libglib2.0_0 libintl8
 sdesc: "Utilities for manipulating desktop files"
-ldesc: "Utilities for manipulating desktop files.
-
-desktop-file-validate: validates a desktop file and prints
-    warnings/errors about spec violations.
-desktop-file-install: installs a desktop file to the applications
-    directory, optionally munging it a bit in transit.
-desktop-menu-tool: loads .vfolder-info and .menu files and does stuff
-    with them"
+ldesc: "Utilities for manipulating desktop files"
