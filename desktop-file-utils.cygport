@@ -1,5 +1,5 @@
 NAME="desktop-file-utils"
-VERSION=0.21
+VERSION=0.22
 RELEASE=1
 CATEGORY="X11"
 SUMMARY="Utilities for manipulating desktop files"
