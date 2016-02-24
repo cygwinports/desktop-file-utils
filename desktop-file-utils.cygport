@@ -6,3 +6,14 @@ SUMMARY="Utilities for manipulating desktop files"
 DESCRIPTION="Utilities for manipulating desktop files"
 HOMEPAGE="http://freedesktop.org/wiki/Software/desktop-file-utils"
 SRC_URI="http://freedesktop.org/software/${NAME}/releases/${NAME}-${VERSION}.tar.xz"
+
+desktop_file_utils_CONTENTS="
+	etc/postinstall/${NAME}.sh
+	etc/preremove/${NAME}.sh
+	usr/bin/desktop-file-*
+	usr/bin/update-desktop-database.exe
+	usr/share/doc/${NAME}/
+	usr/share/emacs/site-lisp/desktop-entry-mode.*
+	usr/share/man/man1/desktop-file-*
+	usr/share/man/man1/update-desktop-database.1*
+"
