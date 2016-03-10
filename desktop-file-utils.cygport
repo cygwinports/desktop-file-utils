@@ -1,6 +1,6 @@
 NAME="desktop-file-utils"
 VERSION=0.22
-RELEASE=1
+RELEASE=2
 CATEGORY="X11"
 SUMMARY="Utilities for manipulating desktop files"
 DESCRIPTION="Utilities for manipulating desktop files"
@@ -8,7 +8,7 @@ HOMEPAGE="http://freedesktop.org/wiki/Software/desktop-file-utils"
 SRC_URI="http://freedesktop.org/software/${NAME}/releases/${NAME}-${VERSION}.tar.xz"
 
 desktop_file_utils_CONTENTS="
-	etc/postinstall/${NAME}.sh
+	etc/postinstall/zp_${NAME}.sh
 	etc/preremove/${NAME}.sh
 	usr/bin/desktop-file-*
 	usr/bin/update-desktop-database.exe
@@ -17,3 +17,23 @@ desktop_file_utils_CONTENTS="
 	usr/share/man/man1/desktop-file-*
 	usr/share/man/man1/update-desktop-database.1*
 "
+
+src_install() {
+	local mimeinfo_cache=/usr/share/applications/mimeinfo.cache
+
+	cd ${B}
+	cyginstall
+
+	dodir /etc/postinstall /etc/preremove
+	cat > ${D}/etc/postinstall/zp_${NAME}.sh <<EOF
+if [ ! -f $mimeinfo_cache ]
+then
+    /usr/bin/update-desktop-database /usr/share/applications
+fi
+find /usr/share/applications -name '*.desktop' -cnewer $mimeinfo_cache -exec /usr/bin/update-desktop-database /usr/share/applications \;
+EOF
+	cat > ${D}/etc/preremove/${NAME}.sh <<EOF
+rm -f $mimeinfo_cache
+EOF
+	chmod +x ${D}/etc/{postinstall,preremove}/*.sh
+}
