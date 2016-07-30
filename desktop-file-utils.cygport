@@ -1,6 +1,6 @@
 NAME="desktop-file-utils"
-VERSION=0.22
-RELEASE=2
+VERSION=0.23
+RELEASE=1
 CATEGORY="X11"
 SUMMARY="Utilities for manipulating desktop files"
 DESCRIPTION="Utilities for manipulating desktop files"
@@ -28,9 +28,9 @@ src_install() {
 	cat > ${D}/etc/postinstall/zp_${NAME}.sh <<EOF
 if [ ! -f $mimeinfo_cache ]
 then
-    /usr/bin/update-desktop-database /usr/share/applications
+    /usr/bin/update-desktop-database ${mimeinfo_cache%/*}
 fi
-find /usr/share/applications -name '*.desktop' -cnewer $mimeinfo_cache -exec /usr/bin/update-desktop-database /usr/share/applications \;
+find ${mimeinfo_cache%/*} -name '*.desktop' -cnewer $mimeinfo_cache -exec /usr/bin/update-desktop-database ${mimeinfo_cache%/*} \;
 EOF
 	cat > ${D}/etc/preremove/${NAME}.sh <<EOF
 rm -f $mimeinfo_cache
